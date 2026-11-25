@@ -2,6 +2,40 @@
 [![Run on Brainlife.io](https://img.shields.io/badge/Brainlife-bl.app.1-blue.svg)](https://doi.org/10.25663/brainlife.app.393)
 
 # Conmat 2 Network
+
+<!-- brainlife-app:begin (generated from the App manifest; edit the manifest, not this block) -->
+
+> **Utility that converts a connectivity matrix (conmat: CSV matrices, index and labels) into a compressed JSON Graph Format network for the brainlife network pipeline.**
+
+Reads each matrix listed in the conmat index.json, attaches the node labels from label.json and the matrix properties, and writes all of them as networks in a JGF file (network.json.gz) with igraph. Use it to feed connectomes into network-analysis Apps that take the network datatype.
+
+| | |
+|---|---|
+| 📥 **Inputs** | `neuro/conmat` |
+| 📤 **Outputs** | `generic/network` |
+| 🐳 **Container** | `filsilva/cxnetwork:0.2.0` |
+| ⚙️ **Resources** | 1 CPUs |
+| 🔗 **Run it** | [doi.org/10.25663/brainlife.app.393](https://doi.org/10.25663/brainlife.app.393) |
+
+#### 📥 Inputs
+
+| Input | Datatype | Required | Description |
+|---|---|---|---|
+| `conmat` | `neuro/conmat` | yes | Connectivity matrix file to be converted to a network |
+
+#### 📤 Outputs
+
+| Output | Datatype | Description |
+|---|---|---|
+| `output` | `generic/network` | Network file converted from a conmat (connectivity matrix) datatype. All metadata is preserved. |
+
+📚 **References used by this App:**
+- Avesani P, McPherson B, Hayashi S, et al. The open diffusion data derivatives, brain data upcycling via integrated publishing of derivatives and reproducible open cloud services. Sci Data 6, 69 (2019). [doi:10.1038/s41597-019-0073-y](https://doi.org/10.1038/s41597-019-0073-y)
+- Bassett DS, Sporns O. Network neuroscience. Nat Neurosci 20(3):353 (2017). [doi:10.1038/nn.4502](https://doi.org/10.1038/nn.4502)
+- Costa LdF, Rodrigues FA, Travieso G, Villas Boas PR. Characterization of complex networks: A survey of measurements. Adv Phys 56(1):167-242 (2007). [doi:10.1080/00018730601170527](https://doi.org/10.1080/00018730601170527)
+
+<!-- brainlife-app:end -->
+
 This simple app converts a conmat datatype to a network datatype (JGFZ) so it can be used in the network pipeline.
 
 
